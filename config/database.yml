@@ -1,0 +1,18 @@
+default: &default
+  adapter: postgresql
+  pool: 5
+  timeout: 5000
+  username: postgres
+  password: 123
+
+development:
+  <<: *default
+  database: shoes_dev
+
+test:
+  <<: *default
+  database: shoes_test
+
+production:
+  <<: *default
+  database: shoes_production
